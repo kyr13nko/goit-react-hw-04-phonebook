@@ -29,7 +29,7 @@ const App = () => {
 
   const createContact = data => {
     const newContact = { id: nanoid(), ...data };
-    setContacts([newContact, ...contacts]);
+    setContacts(prev => [newContact, ...prev]);
   };
 
   const deleteContact = id => {
